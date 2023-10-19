@@ -1,0 +1,64 @@
+html ,body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f7f99b;
+}
+
+
+.container {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    padding: 40px;
+}
+
+h1{
+    font-size: 5em;
+}
+
+p {
+    text-align: justify;
+}
+button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+
+    background-color: orchid;
+    color: white;
+    font-size: 1.2em;
+    width: 10em;
+}
+
+button:hover{
+    background-color: blueviolet;
+}
+
+.goButton {
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin: 4px;
+    height: 250px;
+    width: 250px;
+}
+
+.btn-reset {
+    background-color: red;
+}
+
+.btn-reset:hover {
+    background-color: darkred;
+}
