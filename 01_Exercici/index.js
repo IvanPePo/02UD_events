@@ -34,6 +34,8 @@ window.onload = function () {
             }
         }
 
+        console.log( "IsImg, ", { isImg, src });
+
         return {
             isImg,
             src
@@ -57,9 +59,11 @@ window.onload = function () {
         const  { isImg, src } = callback();
 
         if(  (!isImg )&& ( !images.includes( src )) ){
+            console.log("IF")
             addImageToDiv( images );
 
         } else if( ( isImg ) && ( images.includes(src))){
+            console.log("else")
             const imgReplace = document.getElementsByClassName('img')
             imgReplace[0].remove();  
             addImageToDiv(images)
@@ -73,7 +77,7 @@ window.onload = function () {
     }
 
     const deleteImage = ( img ) =>{   
-        img.addEventListener('click', resetImage );
+        img.addEventListener('dblclick', resetImage );
     }
 
     startButton.addEventListener("click", () => {
@@ -87,9 +91,9 @@ window.onload = function () {
         divContent.append(btnAfegirVerdolaga, btnAfegirProteines, btnAfegirAlinyament, btnReset);
 
         // Eventos de añadir
-        btnAfegirAlinyament.addEventListener('click', () => { createImg(isImg) });
-        btnAfegirProteines.addEventListener('click', () => { createImg(isImg) });
-        btnAfegirVerdolaga.addEventListener('click', () => { createImg(isImg) });
+        btnAfegirAlinyament.addEventListener('click', ()    => { createImg(isImg) });
+        btnAfegirProteines.addEventListener('click', ()     => { createImg(isImg) });
+        btnAfegirVerdolaga.addEventListener('click', ()     => { createImg(isImg) });
         // Evento de borrar
         btnReset.addEventListener('click', resetImage );
 
